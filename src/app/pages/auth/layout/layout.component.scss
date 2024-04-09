@@ -1,0 +1,14 @@
+section {
+    display: flex;
+    flex-direction: row;
+
+    &>.banner {
+        width: 70%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    &>.form {
+        width: 30%;
+    }
+}

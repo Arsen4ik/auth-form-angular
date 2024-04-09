@@ -1,0 +1,14 @@
+<div class="container">
+    <form class="form" action="">
+        <h1>Reset access</h1>
+        <div class="p-input-text">
+            <label for="username">Username</label>
+            <input placeholder="Enter email" pInputText id="username" aria-describedby="username-help"
+                [(ngModel)]="email" />
+            <!-- <small id="username-help" class="error">Enter your username to reset your password.</small> -->
+        </div>
+        <button class="styled-button">Reset</button>
+        <span class="line"></span>
+        <p class="footer"><a routerLink="/auth/sign-in">Sign in</a></p>
+    </form>
+</div>

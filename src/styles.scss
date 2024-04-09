@@ -1,1 +1,145 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+:root {
+    --black: #1A1A1A;
+    --light-gray: #F2F2F2;
+    --gray: #808080;
+    --blue: #007AFF;
+}
+
+* {
+    font-family: 'Abel';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+p,
+label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+input {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: var(--light-gray);
+    border: 1px solid var(--gray);
+    color: gray
+}
+
+.p-input-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    &>input {
+        width: 100%;
+    }
+
+    &>label {
+        padding-left: 10px;
+    }
+}
+
+.container {
+    padding: 100px 50px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.link {
+    align-self: flex-end;
+    color: var(--blue);
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &>a {
+        &:visited {
+            color: var(--blue);
+        }
+    }
+}
+
+.sign-button {
+    width: 100%;
+}
+
+.styled-button {
+    padding: 10px 24px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 25px;
+
+    &:hover {
+        opacity: .9;
+        cursor: pointer;
+    }
+}
+
+.line {
+    display: block;
+    border: .5px solid var(--light-gray);
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+
+    &>a {
+        align-self: flex-end;
+        color: var(--blue);
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &:visited {
+            color: var(--blue);
+        }
+    }
+}
+
+.invalid-input {
+    border-color: brown;
+
+    &+small {
+        color: brown;
+    }
+}

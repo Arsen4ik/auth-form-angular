@@ -1,0 +1,38 @@
+<div class="container">
+    <form class="form" action="">
+        <h1>Now create your accaunt</h1>
+        <div class="p-input-text">
+            <label for="username">Username</label>
+            <input [class]="!isEmailValid() ? 'invalid-input' : ''" placeholder="Enter email"
+                [ngModelOptions]="{standalone: true}" pInputText id="username" aria-describedby="username-help"
+                [(ngModel)]="login" />
+            @if(!isEmailValid()){
+            <small id="username-help" class="error">Email is not valid</small>
+            }
+            <!-- <small id="username-help" class="error">Enter your username to reset your password.</small> -->
+        </div>
+        <div class="p-input-text">
+            <label for="username">Password</label>
+            <input [class]="!isFirstPasswordValid() ? 'invalid-input' : ''" placeholder="Enter password" pInputText
+                id="username" aria-describedby="username-help" [(ngModel)]="password"
+                [ngModelOptions]="{standalone: true}" />
+            @if(!isFirstPasswordValid()){
+            <small id="username-help" class="error">Password is not valid</small>
+            }
+            <!-- <small id="username-help" class="error">Enter your username to reset your password.</small> -->
+        </div>
+        <div class="p-input-text">
+            <label for="username">Type password again</label>
+            <input [class]="!isSecondPasswordValid() ? 'invalid-input' : ''" placeholder="Enter password"
+                [ngModelOptions]="{standalone: true}" pInputText id="username" aria-describedby="username-help"
+                [(ngModel)]="password2" />
+            @if(!isSecondPasswordValid()){
+            <small id="username-help" class="error">Passwords are not the same</small>
+            }
+            <!-- <small id="username-help" class="error">Enter your username to reset your password.</small> -->
+        </div>
+        <button class="styled-button">Sign up</button>
+        <span class="line"></span>
+        <p class="footer"><a routerLink="/auth/sign-in">Sign in</a></p>
+    </form>
+</div>

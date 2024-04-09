@@ -1,0 +1,23 @@
+<div class="container">
+    <form class="form" action="">
+        <h1>Nice to see you again</h1>
+        <div class="p-input-text">
+            <label for="username">Username</label>
+            <input placeholder="Enter email" [ngModelOptions]="{standalone: true}" pInputText id="username"
+                aria-describedby="username-help" [(ngModel)]="login" />
+            <!-- <small id="username-help" class="error">Enter your username to reset your password.</small> -->
+        </div>
+        <div class="p-input-text">
+            <label for="username">Password</label>
+            <input placeholder="Enter password" [ngModelOptions]="{standalone: true}" pInputText id="username"
+                aria-describedby="username-help" [(ngModel)]="password" />
+            <!-- <small id="username-help" class="error">Enter your username to reset your password.</small> -->
+        </div>
+        <p class="link"><a routerLink="/auth/reset">
+                Forgot password
+            </a></p>
+        <button class="styled-button">Sign in</button>
+        <span class="line"></span>
+        <p class="footer">Dont have an account? <a routerLink="/auth/sign-up">Sign up now</a></p>
+    </form>
+</div>
