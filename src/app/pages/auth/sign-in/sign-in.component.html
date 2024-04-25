@@ -16,7 +16,7 @@
         <p class="link"><a routerLink="/auth/reset">
                 Forgot password
             </a></p>
-        <button class="styled-button">Sign in</button>
+        <button (click)="onSubmit()" class="styled-button">Sign in</button>
         <span class="line"></span>
         <p class="footer">Dont have an account? <a routerLink="/auth/sign-up">Sign up now</a></p>
     </form>

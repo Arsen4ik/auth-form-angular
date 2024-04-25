@@ -5,13 +5,20 @@ import { SignInComponent } from './pages/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
 import { ResetComponent } from './pages/auth/reset/reset.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 export const routes: Routes = [
     {
         path: '',
         // component: HomeComponent,
-        redirectTo: 'auth',
+        redirectTo: 'profile',
         pathMatch: 'full',
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'auth',
@@ -24,7 +31,8 @@ export const routes: Routes = [
             },
             {
                 path: 'sign-in',
-                component: SignInComponent
+                component: SignInComponent,
+
             },
             {
                 path: 'sign-up',

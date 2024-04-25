@@ -1,0 +1,27 @@
+section {
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+
+    p {
+        font-size: 36px;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        height: 50px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right, crimson, blueviolet);
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 24;
+        border: 2px solid rgb(169, 169, 169);
+        border-radius: 20px;
+        background-color: inherit;
+    }
+}
